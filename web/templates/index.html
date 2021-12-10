@@ -1,0 +1,197 @@
+ {%extends 'main.html'%}{%block content%} {% load static %}
+
+<body class="  pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <div class="app side-nav-dark header-dark rtl">
+        <div class="layout">
+            <!-- Page Container START -->
+            <div class="page-container">
+                <!-- Header START -->
+                <div class="header navbar">
+                    <div class="header-container">
+                        <ul class="nav-left">
+                            <li>
+                                <a>
+                                    <img style="width: 40px" src="{%static 'images/icon.png'%}" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{%url 'index'%}" style="font-size: 16px">
+                                    خانه
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{%url 'about'%}" style="font-size: 16px">
+                                    درباره ما
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+                            <li class="user-profile dropdown">
+                                <a href="{%url 'login'%}" class="dropdown-toggle">
+
+                                    <div class="user-info">
+                                        <span class="name pdd-right-5">ورود / ثبت نام</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Header END -->
+                <!-- Content Wrapper START -->
+                <div class="main-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="social">
+                                    <div class="container-fluid">
+                                        <div class="social-cover card" style="border: none">
+                                            <div class="cover-img" style="background-image: url('{%static 'images/MainLOGO3.jpg'%}')">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12" style="direction:rtl">
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h4 class="card-title" style="text-align: center;font-family: 'web-vazir'">اسناد، مدارک و کتاب‌های خود را اسکن کنید یا از آن‌ها عکس بگیرید و در چند ثانیه متن تایپی آن‌ را دریافت کنید</h4>
+                                                    <form class="form-horizontal mrg-top-40 pdd-right-30">
+                                                        <div class="form-group row">
+                                                            <label for="form-1-1" class="col-md-2 control-label">بارگذاری فایل</label>
+                                                            <div class="col-md-10">
+                                                                <input type="file" class="form-control" id="form-1-1" placeholder="Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="form-1-1" class="col-md-2 control-label">زبان مورد نظر</label>
+                                                            <div class="col-md-10">
+                                                                <select name="" id="" class="form-control">
+                                                                    <option value="">فارسی</option>
+                                                                    <option value="">English</option>
+                                                                    <option value="">عربی</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <input type="submit" class="btn btn-warning" value="شروع پردازش" style="margin: 1px auto !important;font-weight: bold;color:#313665;font-family: 'web-vazir';border: 2px solid #313665">
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-md-6">
+                                            <div class="card">
+                                                <div class="card-heading border bottom">
+                                                    <h4 class="card-title" style="font-family: 'web-vazir'">متن</h4>
+                                                </div>
+                                                <div class="card-block">
+                                                    <div class="pdd-vertical-10">
+                                                        <textarea class="form-control" rows="3" id="form-1-5" style="margin-top: 0px; margin-bottom: 0px; height: 175px;"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2">
+                                            <div class="card">
+                                                <div class="card-block">
+                                                    <a class="btn btn-warning" style="margin-top: 5%;font-weight: bold;color:#313665;font-family: 'web-vazir';width: 100%">دانلود</a><br>
+                                                    <a class="btn btn-warning" style="margin-top:5%;font-weight: bold;color:#313665;width: 100%">Overlay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-6">
+                                            <div class="card">
+                                                <div class="card-heading border bottom">
+                                                    <h4 class="card-title" style="font-family: 'web-vazir'">تصویر</h4>
+                                                </div>
+                                                <div class="card-block">
+                                                    <div class="pdd-vertical-10">
+                                                        <div class="card">
+                                                            <div class="card-media">
+                                                                <img class="img-responsive" src="{%static 'images/image.png'%}" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="direction:rtl">
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h3 class="card-title" style="text-align: center;font-family: 'web-vazir'">تماس با ما</h3>
+                                                    <div class="col-md-4">
+                                                        <div class="col-md-4 float-right">
+                                                            <div class="col-md-3 float-right myText">
+                                                                <label>تلفن :</label>
+                                                            </div>
+                                                            <div class="col-md-9 float-right myText">
+                                                                <label>021-88930251</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 float-right">
+                                                            <div class="col-md-3 float-right myText">
+                                                                <label>آدرس :</label>
+                                                            </div>
+                                                            <div class="col-md-9 float-right myText">
+                                                                <label>میدان ولی عصر - خیابان حافظ - خیابان رودسر - پلاک 8</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 float-right">
+                                                            <div class="col-md-3 float-right myText">
+                                                                <label>ایمیل :</label>
+                                                            </div>
+                                                            <div class="col-md-9 float-right myText">
+                                                                <label>info@GGGeeks.ir</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.9349255774243!2d51.4098686291675!3d35.708022587741425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e01381c1fcb8b%3A0x8124b7b9286d6294!2z2LTYsdqp2Kog2q_bjNqpINmF2YXYqtin2LIg2qnZh9qp2LTYp9mG!5e0!3m2!1sen!2s!4v1569059825363!5m2!1sen!2s"
+                                                            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- Content Wrapper END -->
+
+                    <!-- Footer START -->
+                    {%include 'footer.html'%}
+                    <!-- Footer END -->
+
+                </div>
+                <!-- Page Container END -->
+
+            </div>
+        </div>
+    </div>
+    <div class="jvectormap-label" style="display: none; left: 820px; top: 363px;">Georgia</div>
+</body>
+{%endblock%}

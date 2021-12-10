@@ -1,0 +1,102 @@
+{% load static %}
+<div class="header navbar">
+    <div class="header-container">
+        <ul class="nav-left">
+            <li>
+                <a class="side-nav-toggle" href="javascript:void(0);">
+                    <i class="fas fa-th-large"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-right">
+            <li class="notifications dropdown">
+                <span class="counter">2</span>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="far fa-bell"></i>
+                </a>
+
+                <ul class="dropdown-menu ">
+                    <li class="notice-header">
+                        <span>اعلان ها</span>
+                    </li>
+                    <li>
+                        <ul class="list-info overflow-y-auto relative scrollable ps-container ps-theme-default ps-active-y" data-ps-id="378dfc4b-c667-9b05-aff5-ff6aea30464b" style="text-align:right">
+                            <li>
+                                <a href="">
+                                    <img class="thumb-img" src="{%static 'images/user.jpg'%}" alt="">
+                                    <div class="info">
+                                        <span class="title">
+                                                    <span class="font-size-14 text-semibold">اطلاعیه مهم</span>
+                                        <span class="text-gray">توسط <span class="text-dark">مدیر کل</span></span>
+                                        </span>
+                                        <span class="sub-title">5 دقیقه پیش</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img class="thumb-img" src="{%static 'images/user.jpg'%}" alt="">
+                                    <div class="info">
+                                        <span class="title">
+                                                        <span class="font-size-14 text-semibold">اطلاعیه لورم ایپسوم</span>
+                                        <span class="text-gray">توسط <span class="text-dark">مدیر کل</span></span>
+                                        </span>
+                                        <span class="sub-title">5 دقیقه پیش</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img class="thumb-img" src="{%static 'images/user.jpg'%}" alt="">
+                                    <div class="info">
+                                        <span class="title">
+                                                            <span class="font-size-14 text-semibold">لورم</span>
+                                        <span class="text-gray">توسط <span class="text-dark">مدیر کل</span></span>
+                                        </span>
+                                        <span class="sub-title">5 دقیقه پیش</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                                <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                            </div>
+                            <div class="ps-scrollbar-y-rail" style="top: 0px; height: 248px; right: 0px;">
+                                <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 148px;"></div>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li class="notice-footer">
+                        <span>
+                                    <a href="" class="text-gray">تمام اعلان ها</a>
+                                </span>
+                    </li>
+                </ul>
+            </li>
+            <li class="user-profile dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <img class="profile-img img-fluid" src="{{request.user.customer.profile_pic.url}}" alt="">
+                    <div class="user-info">
+                        <span class="name pdd-right-5">{{request.user}}</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </a>
+                <ul class="dropdown-menu" style="direction:rtl;text-align:right">
+                    <li>
+                        <a href="{%url 'dashboard'%}">
+                            <i class="fas fa-user"></i>
+                            <span>پروفایل </span>
+                        </a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="{%url 'loOutPage'%}">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>خروج </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+{%extends 'main.html'%}{%block content%} {% load static %}
+
+<body class="  pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <div class="app side-nav-dark header-dark rtl">
+        <div class="layout">
+            <!-- Side Nav START -->
+            {%include 'sidebar.html'%}
+            <!-- Side Nav END -->
+            <!-- Page Container START -->
+            <div class="page-container">
+                <!-- Header START -->
+                {%include 'header.html'%}
+                <!-- Header END -->
+                <!-- Content Wrapper START -->
+                <div class="main-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="social">
+                                    <div class="container-fluid">
+                                        <div class="social-cover card" style="border: none">
+                                            <div id="GGGIndex" lass="cover-img overlay-dark bg" style="background-image: url( '{%static 'images/GGGIndex.png'%}') ">
+                                                <div class="cover-content ">
+                                                    <div class="text-center border bottom border-hide-sm pdd-horizon-30 pdd-btm-10 ">
+                                                        <h1 class="no-mrg-btm " style="font-weight:bold ">شرکت گیگ ممتاز کهکشان</h1>
+                                                        <p>موتور پردازش متن ایرانی</p>
+                                                    </div>
+                                                    <div class="row mrg-top-15 ">
+                                                        <div class="col-md-6 border right border-hide-sm ">
+                                                            <div class="text-center ">
+                                                                <h3 class="no-mrg ">3</h3>
+                                                                <span>زبان</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 ">
+                                                            <div class="pdd-horizon-15 ">
+                                                                <div class="text-center ">
+                                                                    <h3 class="no-mrg ">{{ocr_count}}</h3>
+                                                                    <span>متن پردازش شده</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 " style="direction:rtl ">
+                                    <div class="card ">
+                                        <div class="card-block ">
+                                            <div class="row ">
+                                                <div class="col-md-12 ">
+                                                    <h4 class="card-title " style="text-align: center;font-family: 'web-vazir' ">اسناد، مدارک و کتاب‌های خود را اسکن کنید یا از آن‌ها عکس بگیرید و در چند ثانیه متن تایپی آن‌ را دریافت کنید</h4>
+                                                    <form class="form-horizontal mrg-top-40 pdd-right-30 " method="POST" enctype=multipart/form-data>
+                                                        {% csrf_token %}
+                                                        <div class="form-group row ">
+                                                            <label for="form-1-1 " class="col-md-2 control-label ">بارگذاری فایل</label>
+                                                            <div class="col-md-10">
+                                                                <input type="file" class="form-control" id="form-1-1" placeholder="Name" name="ocr_pic">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row ">
+                                                            <input type="submit" class="btn btn-warning" value="شروع پردازش" style="margin: 1px auto !important;font-weight: bold;color:#313665;font-family: 'web-vazir' ">
+                                                        </div>
+                                                    </form>
+                                                    <p style="color: red;">{{message}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 ">
+                                    <div class="row ">
+                                        <div class="col-lg-5 col-md-6 ">
+                                            <div class="card ">
+                                                <div class="card-heading border bottom ">
+                                                    <h4 class="card-title " style="font-family: 'web-vazir' ">متن</h4>
+                                                </div>
+                                                <div class="card-block ">
+                                                    <div class="pdd-vertical-10 ">
+                                                        <textarea class="form-control " rows="3 " id="form-1-5 " style="margin-top: 0px; margin-bottom: 0px; height: 175px; ">{{text}}</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 ">
+                                            <div class="card ">
+                                                <div class="card-block ">
+                                                    <a class="btn btn-warning " style="margin-top: 5%;font-weight: bold;color:#313665;font-family: 'web-vazir';width: 100% ">دانلود</a><br>
+                                                    <a class="btn btn-warning " style="margin-top:5%;font-weight: bold;color:#313665;width: 100% ">Overlay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-6 ">
+                                            <div class="card ">
+                                                <div class="card-heading border bottom ">
+                                                    <h4 class="card-title " style="font-family: 'web-vazir' ">تصویر</h4>
+                                                </div>
+                                                <div class="card-block ">
+                                                    <div class="pdd-vertical-10 ">
+                                                        <div class="card ">
+                                                            <div class="card-media ">
+                                                                <img class="img-responsive " src="{% static 'images/image.png'%} " alt=" ">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Content Wrapper END -->
+
+                    <!-- Footer START -->
+                    {%include 'footer.html'%}
+                    <!-- Footer END -->
+
+                </div>
+                <!-- Page Container END -->
+
+            </div>
+        </div>
+
+
+        <div class="jvectormap-label " style="display: none; left: 820px; top: 363px; ">Georgia</div>
+
+</body>
+{%endblock%}

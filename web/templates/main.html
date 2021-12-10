@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!-- saved from url=(0038) -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
+    <title>متن پرداز کهکشان</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/GGGLogo.png'%}">
+
+    <!-- plugins css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/pace-theme-minimal.css'%}">
+    <link rel="stylesheet" href="{% static 'css/perfect-scrollbar.min.css'%}">
+    <!-- page plugins css -->
+    <link rel="stylesheet" href="{% static 'css/jquery-jvectormap-1.2.2.css'%}">
+    <link rel="stylesheet" href="{% static 'css/nv.d3.min.css'%}">
+    <!-- core css -->
+    <link href="{% static 'css/ei-icon.css'%}" rel="stylesheet">
+    <link href="{% static 'css/themify-icons.css'%}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/animate.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/app.css'%}" rel="stylesheet">
+
+    <script src="{% static 'js/2d3d402d91.js'%}"></script>
+
+    <style type="text/css">
+        /* Chart.js */
+        
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0, 0, 0, 0.6);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+        
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+        
+        #GGGIndex {
+            background-image: "{%static 'images/GGGIndex.png'%}";
+        }
+    </style>
+</head>
+{%block content%} {%endblock%}
+
+</html>
